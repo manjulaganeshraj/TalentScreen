@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.manjula.listeners"/>
+  </listeners>
+  <test name="Valiating subjects(failed)">
+    <classes>
+      <class name="com.manjula.validateSubjects">
+        <methods>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.manjula.validateSubjects -->
+      <class name="com.manjula.HomePage">
+        <methods>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.manjula.HomePage -->
+      <class name="com.manjula.validateTitle">
+        <methods>
+          <include name="tearDown"/>
+          <include name="basePageNavigation"/>
+        </methods>
+      </class> <!-- com.manjula.validateTitle -->
+    </classes>
+  </test> <!-- Valiating subjects(failed) -->
+</suite> <!-- Failed suite [Suite] -->

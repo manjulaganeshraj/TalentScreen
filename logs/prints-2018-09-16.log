@@ -1,0 +1,8 @@
+16:24:03.768 [main] INFO  resources.base - Driver is initialised
+16:24:06.873 [main] INFO  resources.base - Navigated to Home Page
+16:24:14.851 [main] INFO  resources.base - restrictedUser
+16:24:17.919 [main] INFO  resources.base - Successfully valiated Text Message
+16:27:06.461 [main] INFO  resources.base - Driver is initialised
+16:27:10.698 [main] INFO  resources.base - Navigated to Home Page
+16:27:19.835 [main] INFO  resources.base - Non-restrictedUser
+16:27:22.904 [main] INFO  resources.base - Successfully valiated Text Message
