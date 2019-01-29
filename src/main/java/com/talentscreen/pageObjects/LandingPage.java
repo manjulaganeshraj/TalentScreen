@@ -9,10 +9,12 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.talentscreen.utils.HelperManager;
 
-public class LandingPage extends HelperManager {
+public class LandingPage  {
 
 	WebDriver driver;
 
@@ -41,36 +43,44 @@ public class LandingPage extends HelperManager {
 	
 	public List<String> selectOptionWithText (String textToSelect){
 		
-		waitForLoad(driver);
+		HelperManager.waitForLoad(driver);
 		
-		List<String> results= new ArrayList<String>();
+		List<String> results = new ArrayList<String>();
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);// **@! MOVE it to base class
 		
 		try {
 			
-			WebElement autoOptions = driver.findElement(search);
-			explicitWait(autoOptions, driver);
+			//WebElement autoOptions = driver.findElement(search);
+			//explicitWait(autoOptions, driver);
 			
+//			WebDriverWait wait= new WebDriverWait(driver, 30);
+//			WebElement element= wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(search)));
+//			element.click();
 			
+			driver.findElement(search).sendKeys(".");
+			driver.findElement(search).clear();
+			
+			//driver.findElement(search).sendKeys(textToSelect);
+					
 			for(int i=0;i<textToSelect.length();i++ )
 			{
 				driver.findElement(search).sendKeys(String.valueOf(textToSelect.charAt(i)));
 			}
 			
-			WebElement listData = driver.findElement(listOfElements);
+			//WebElement wb = driver.findElement(By.xpath("//ul[@role='listbox']/li[1]"));
+			
+			//WebElement listData = driver.findElement(listOfElements);
 					
-			explicitWait(listData, driver);
+			//explicitWait(listData, driver);
 			
 			WebElement listData2 = driver.findElement(listOfElements);
-			
 			
 			List<WebElement> optionsToSelect = listData2.findElements(By.tagName("li"));
 			
 			if(optionsToSelect.size()>0)
 				optionsToSelect.forEach(x -> results.add(x.getText()));
 			
-//			
 //			for(WebElement option : optionsToSelect){
 //				
 //				results.add

@@ -5,8 +5,8 @@
     <classes>
       <class name="com.test.webPages.AutocompleteTest">
         <methods>
-          <include name="rightClickTest"/>
           <include name="tearDown"/>
+          <include name="searchBoxTest"/>
         </methods>
       </class> <!-- com.test.webPages.AutocompleteTest -->
     </classes>

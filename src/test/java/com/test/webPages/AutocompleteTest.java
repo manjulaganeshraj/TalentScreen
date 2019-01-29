@@ -1,21 +1,29 @@
 package com.test.webPages;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.talentscreen.pageObjects.LandingPage;
+import com.talentscreen.utils.ExcelHelper;
+import com.talentscreen.utils.FileUtilityManager;
+import com.talentscreen.utils.TestUtil;
 import com.test.base.Base;
 
 public class AutocompleteTest extends Base {
+	
+	@DataProvider
+	public Object[][] getAutocompleteData(){
+		
+		Object data[][] = TestUtil.getTestData("TestData");
+		return data;
+	}
 
-	@Test
-	public void rightClickTest() throws IOException {
+	@Test(dataProvider = "getAutocompleteData")
+	public void searchBoxTest(String words) throws IOException {
 
 		driver = initializeDriver();
 		driver.get(prop.getProperty("url"));
@@ -23,25 +31,37 @@ public class AutocompleteTest extends Base {
 		LandingPage l = new LandingPage(driver);
 
 
-		List<String> results = l.selectOptionWithText("ja");
+
+		List<String> results = l.selectOptionWithText(words);
 		
-		if(results.size()==0)
-		{
-			System.out.println("here");	
-			Assert.fail();
-		}
+		System.out.println(words +" - results:"+results.size() );	
+		
+//		if(results.size()==0)
+//		{
+//			System.out.println("here");	
+//			Assert.fail();
+//		}
 		
 		results.forEach(x -> 
 		{
-			System.out.println(x);		
-			if(x.contains("ja"))
-				Assert.assertTrue(true);
-				  
-			else
-				Assert.fail();
+			//System.out.println(x);		
+			if((x.toLowerCase().contains(words.toLowerCase()) == false))
+				Assert.fail(x+" does not contain "+ words);
+				
 		});
 		
 		//l.normalWait(driver, 5);
 	}
+	
+	/*@DataProvider(name="searchData")
+	public Object[][] testData() throws IOException{
+		return ExcelHelper.getData("TestData");
+	}
+	
+	@Test(dataProvider="searchData")//(groups="smoke")
+	public void searchTest(String searchKeyWord, String expected){
+		
+	
+	}*/
 	
 }

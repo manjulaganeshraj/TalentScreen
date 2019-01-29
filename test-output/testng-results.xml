@@ -1,17 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13536" started-at="2019-01-27T06:07:41Z" finished-at="2019-01-27T06:07:55Z">
+  <suite name="Default suite" duration-ms="95559" started-at="2019-01-29T03:10:03Z" finished-at="2019-01-29T03:11:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13536" started-at="2019-01-27T06:07:41Z" finished-at="2019-01-27T06:07:55Z">
+    <test name="Default test" duration-ms="95559" started-at="2019-01-29T03:10:03Z" finished-at="2019-01-29T03:11:38Z">
       <class name="com.test.webPages.AutocompleteTest">
-        <test-method status="PASS" signature="rightClickTest()[pri:0, instance:com.test.webPages.AutocompleteTest@f6c48ac]" name="rightClickTest" duration-ms="11194" started-at="2019-01-26T22:07:41Z" finished-at="2019-01-26T22:07:52Z">
+        <test-method status="PASS" signature="searchBoxTest(java.lang.String)[pri:0, instance:com.test.webPages.AutocompleteTest@57fffcd7]" name="searchBoxTest" duration-ms="16301" started-at="2019-01-28T19:10:06Z" data-provider="getAutocompleteData" finished-at="2019-01-28T19:10:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ja]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- rightClickTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.webPages.AutocompleteTest@f6c48ac]" name="tearDown" is-config="true" duration-ms="2289" started-at="2019-01-26T22:07:52Z" finished-at="2019-01-26T22:07:55Z">
+        </test-method> <!-- searchBoxTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.webPages.AutocompleteTest@57fffcd7]" name="tearDown" is-config="true" duration-ms="2547" started-at="2019-01-28T19:10:22Z" finished-at="2019-01-28T19:10:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="searchBoxTest(java.lang.String)[pri:0, instance:com.test.webPages.AutocompleteTest@57fffcd7]" name="searchBoxTest" duration-ms="19356" started-at="2019-01-28T19:10:25Z" data-provider="getAutocompleteData" finished-at="2019-01-28T19:10:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[r4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBoxTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.webPages.AutocompleteTest@57fffcd7]" name="tearDown" is-config="true" duration-ms="565" started-at="2019-01-28T19:10:44Z" finished-at="2019-01-28T19:10:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="searchBoxTest(java.lang.String)[pri:0, instance:com.test.webPages.AutocompleteTest@57fffcd7]" name="searchBoxTest" duration-ms="14161" started-at="2019-01-28T19:10:44Z" data-provider="getAutocompleteData" finished-at="2019-01-28T19:10:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[java]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBoxTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.webPages.AutocompleteTest@57fffcd7]" name="tearDown" is-config="true" duration-ms="551" started-at="2019-01-28T19:10:59Z" finished-at="2019-01-28T19:10:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="searchBoxTest(java.lang.String)[pri:0, instance:com.test.webPages.AutocompleteTest@57fffcd7]" name="searchBoxTest" duration-ms="22822" started-at="2019-01-28T19:10:59Z" data-provider="getAutocompleteData" finished-at="2019-01-28T19:11:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ka-fka]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBoxTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.webPages.AutocompleteTest@57fffcd7]" name="tearDown" is-config="true" duration-ms="2448" started-at="2019-01-28T19:11:22Z" finished-at="2019-01-28T19:11:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="searchBoxTest(java.lang.String)[pri:0, instance:com.test.webPages.AutocompleteTest@57fffcd7]" name="searchBoxTest" duration-ms="13374" started-at="2019-01-28T19:11:24Z" data-provider="getAutocompleteData" finished-at="2019-01-28T19:11:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[JIRA]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBoxTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.webPages.AutocompleteTest@57fffcd7]" name="tearDown" is-config="true" duration-ms="607" started-at="2019-01-28T19:11:38Z" finished-at="2019-01-28T19:11:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
